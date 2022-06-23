@@ -216,4 +216,42 @@ public class formulas
         double r = (-b - (Math.sqrt(Math.pow(b,2) - (4 * a * c)))) / 2 * a;
         return r;
     }
+    
+//soma dos divisores PRÓPRIOS
+public static int divisoresPR(int num)
+{
+        int  soma=0;
+        int aux=1;
+        
+        while (aux<num) 
+        { 
+        if (num%aux==0) soma=soma+aux;
+        aux++;
+                
+        }
+        return soma;
+               
+}
+
+// verificar se os números são amigos
+public static boolean amigos( int num1, int num2) 
+{ 
+    boolean aux=true;
+    int soma1=divisoresPR(num1);
+    int soma2=divisoresPR(num2);
+   if ((num1==soma2)&&(num2==soma1)) return aux;
+       else {
+             aux=false; return aux;
+            }
+
+}
+
+// verificar se o número é perfeito
+public static boolean perfeito( int num) 
+{ 
+  if ( divisores(num) == num ) return true;
+        else return false;
+}
+    
+
 }
