@@ -252,6 +252,59 @@ public static boolean perfeito( int num)
   if ( divisores(num) == num ) return true;
         else return false;
 }
+    //--------MÉTODOS DE STRING-----------
+    
+    // calcular número de vogais em uma palavra
+    public static int vogais(String palavra)
+    {
+        int total = 0;
+        for(int cont = 0; cont < palavra.length(); cont++)
+        {
+            char letra = palavra.charAt(cont);
+            if(letra == 'a' || letra == 'e' || letra =='i' || letra == 'o' || letra=='u'){
+                total++;
+            } 
+        }
+        return total;
+    }
+  //retorna a palavra ao contrário
+    public static char[] contrario (String palavra)
+    {
+        int numletras = palavra.length() - 1;
+        char [] invertida = new char [numletras+1] ;
+        int pos = 0;
+        for(int cont = numletras;cont>=0;cont--){
+            invertida[pos] = palavra.charAt(cont);
+            pos++;
+        }
+        return invertida;
+    }
+    //verifica se a palavra é um palíndromo
+    public static boolean palindromo (String palavra){
+        int reverso = palavra.length()-1;
+        int s = 0;
+        boolean cond = false;
+        for(int cont = 0;cont<palavra.length();cont++){
+
+            if(palavra.charAt(cont) == palavra.charAt(reverso)){s++;};
+            reverso--;
+        }
+        if (s == palavra.length()){cond = true;};
+        return cond;
+    }
+   //conjuga o verbo no futuro
+    public static void futuro (String verbo)
+    {
+        System.out.println("Eu " + verbo + "ei");
+        System.out.println("Tu " + verbo + "as");
+        System.out.println("Ele/Ela " + verbo + "a");
+        System.out.println("Nos " + verbo + "emos");
+        System.out.println("Vos " + verbo + "eis");
+        System.out.println("Eles/Elas " + verbo + "ao");
+    }
+    
+    
+    
     
 
 }
