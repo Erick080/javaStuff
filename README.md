@@ -1,4 +1,4 @@
-# Projetos e métodos criados usando o java durante a faculdade.
+# Projetos e bibliotecas criadas usando o java durante cadeiras da faculdade.
 
 biblioteca - diversos métodos que incluem o cálculo de figuras geométricas, e operações que verificam números primos,amigos,divisores,múltiplos,etc.
 
